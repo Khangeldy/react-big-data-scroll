@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.sss$/,
+        test: /\.css$/,
         include: /src\/css/,
         use: [
           'style-loader',
@@ -26,10 +26,7 @@ module.exports = {
         test: /\.js$/,
         include: /src/,
         use: {
-          loader: 'babel-loader', // https://github.com/babel/babel-loader
-          options: {
-            presets: ['@babel/preset-env']
-          }
+          loader: 'babel-loader'
         }
       },
       { test: /\.ejs$/, include: /src\/template/, use: ['ejs-loader'] },

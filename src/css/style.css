@@ -1,0 +1,48 @@
+@import 'normalize';
+@import 'sanitize';
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto';
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+
+  & .app-header {
+    height: 100px;
+  }
+  & .app-content {
+    height: calc(100% - 100px);
+  }
+}
+
+.full-input {
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  font-size: 40px;
+}
+
+.unstyled-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.figure._item {
+  display: flex;
+  flex-direction: row;
+
+  & .figcaption {
+    position: relative;
+    flex: 1;
+  }
+
+  & .item_email {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #b4b4b4;
+  }
+}

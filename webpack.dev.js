@@ -7,9 +7,7 @@ const path = require('path'),
       common = require('./webpack.common.js'),
       Jarvis = require('webpack-jarvis');
 
-if (process.env.NODE_ENV !== 'production') {
-  console.log('Webpack development режимінде!');
-}
+console.log(process.env.NODE_ENV, '=============')
 
 module.exports = merge(common, {
   devtool: 'inline-source-map',
@@ -19,15 +17,15 @@ module.exports = merge(common, {
       port: 3000,
       server: { baseDir: ['dist'] }
     }),
-    new Jarvis({
-      port: 3800
-    }),
-    new GoogleFontsPlugin({
-      fonts: [
-        { family: "Source Sans Pro" },
-        { family: "Roboto", variants: [ "400", "700italic" ] }
-      ]
-    }),
+    // new Jarvis({
+    //   port: 3800
+    // }),
+    // new GoogleFontsPlugin({
+    //   fonts: [
+    //     { family: "Source Sans Pro" },
+    //     { family: "Roboto", variants: [ "400", "700italic" ] }
+    //   ]
+    // }),
     new CopyWebpackPlugin([
       {
         from: 'src/images/',
